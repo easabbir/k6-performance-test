@@ -1,0 +1,29 @@
+{
+    "auth": {
+        "username": "admin",
+        "password": "password123"
+    },
+
+    "createBooking": {
+        "firstname": "fahimss",
+        "lastname": "a",
+        "totalprice": 110,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2019-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    },
+    "updateBooking": {
+        "firstname": "John",
+        "lastname": "Doe",
+        "totalprice": 150,
+        "depositpaid": false,
+        "bookingdates": {
+            "checkin": "2020-02-02",
+            "checkout": "2020-03-03"
+        },
+        "additionalneeds": "Lunch"
+    }
+}
