@@ -114,6 +114,6 @@ Example
 k6 run -o experimental-prometheus-rw .\tests\basic_test.js
 ```
 ## Screenshots
+![dashboard sample](https://github.com/user-attachments/assets/92317abf-2878-4fae-a7c5-4c2353bda976)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
