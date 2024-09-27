@@ -1,7 +1,10 @@
-
 # Performance testing with K6 and Graphana and Prometheus
 
-This project sets up a monitoring and visualization system using Prometheus and Grafana with Docker Compose, enabling users to observe performance tests executed via k6. Prometheus, a time-series database, is configured to accept remote write requests from k6, allowing it to store and scrape performance metrics. Grafana, a powerful visualization tool, is then used to create dashboards for real-time analysis of the collected data. This setup provides an efficient and scalable way to monitor system performance and visualize test results, making it ideal for load testing and performance tracking.
+This project sets up a monitoring and visualization system using Prometheus and Grafana with Docker Compose, enabling users to observe performance tests executed via k6. <br/>
+
+Prometheus, a time-series database, is configured to accept remote write requests from k6, allowing it to store and scrape performance metrics. Grafana, a powerful visualization tool, is then used to create dashboards for real-time analysis of the collected data. <br/>
+
+This setup provides an efficient and scalable way to monitor system performance and visualize test results, making it ideal for load testing and performance tracking.
 
 
 # Hi, I'm Ehsanul Alam Sabbir! 👋
@@ -30,15 +33,19 @@ I'm a curious Software Quality Assurance Engineer who loves to experiment with d
 
 ## Documentation
 
-k6 Performance Test Project
-This repository contains a complete setup for running performance tests using k6, with Prometheus as the data collection backend and Grafana for visualizing the test results. By utilizing Docker Compose, this project automates the deployment of Prometheus and Grafana, allowing you to efficiently monitor and analyze the performance of your system under test.
+k6 Performance Test Project<br/>
+This repository contains a complete setup for running performance tests using k6, with Prometheus as the data collection backend and Grafana for visualizing the test results. <br/>
+
+By utilizing Docker Compose, this project automates the deployment of Prometheus and Grafana, allowing you to efficiently monitor and analyze the performance of your system under test.
 
 
 Prerequisites:
 
-Docker: Install Docker on your machine.
+Docker: Install Docker on your machine.<br/>
+Windows: https://www.docker.com/products/docker-desktop/
 
-Docker Compose: Ensure Docker Compose is installed (it comes with Docker Desktop).
+Docker Compose: Ensure Docker Compose is installed (it comes with Docker Desktop).<br/>
+Download k6: https://k6.io/open-source/
 
 ## Deployment
 
@@ -47,14 +54,18 @@ To deploy this project
 
 Setup Instructions
 1. Clone the Repository
-
-git clone https://github.com/easabbir/k6-performance-test.git
-
+```bash
+  git clone https://github.com/easabbir/k6-performance-test.git
+```
+```bash
 cd k6-performance-test
-2. Run the docker-compose.yml File
+```
+
+2. Run the docker-compose.yml file <br/>
+
 The docker-compose.yml file defines the services for Prometheus and Grafana. It also mounts the Prometheus configuration file (prometheus.yml).
 
-3. Run Docker Compose
+Run Docker Compose
 Run the following command to start Prometheus and Grafana:
 
 ```bash
@@ -67,14 +78,15 @@ Grafana will be available at http://localhost:3000
 
 (default credentials: admin/admin)
 
-4. Configure Grafana
+3. Configure Grafana
+
 Go to Grafana (http://localhost:3000).
 
 
 Log in with the default credentials (admin/admin), and skip setting password for now.
 
 
-Add Prometheus as a data source:
+Add Prometheus as a data source: <br/>
 Navigate to Configuration > Data Sources > Add Data Source.
 Select Prometheus and set the URL to http://prometheus:9090.
 Click Save & Test.
@@ -82,7 +94,7 @@ Click Save & Test.
 
 
 
-5. Run k6 Performance Tests
+4. Run k6 Performance Tests
 You can now run k6 tests and push the metrics to Prometheus.
 
 
@@ -92,7 +104,7 @@ Example
 k6 run -o experimental-prometheus-rw .\tests\basic_test.js
 ```
 
-6. Create Grafana Dashboards
+5. Create Grafana Dashboards
 Go to Grafana's home page and click on Create > Dashboard.
 Add a Graph panel.
 Select the Prometheus data source and use queries like k6_http_req_duration_seconds_count to visualize k6 test results.
@@ -115,6 +127,7 @@ Example
 k6 run -o experimental-prometheus-rw .\tests\basic_test.js
 ```
 ## Screenshots
-![dashboard sample](https://github.com/user-attachments/assets/92317abf-2878-4fae-a7c5-4c2353bda976)
+
+![dashboard sample](https://github.com/user-attachments/assets/25ec37d7-30ae-4149-a328-566fe1c66d0a)
 
 
